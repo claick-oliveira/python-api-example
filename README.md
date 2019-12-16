@@ -5,7 +5,7 @@ This is an example for python api projects.
 ![Github Workflow](https://github.com/claick-oliveira/python-api-example/workflows/Python%20package/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-<a href="https://asciinema.org/a/288589?autoplay=1"><img src="https://asciinema.org/a/288589.svg" width="836"/></a>
+![demo gif](./images/demo.gif)
 
 ## Getting Started
 
