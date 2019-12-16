@@ -48,6 +48,9 @@ requirementsdev:
 	@ echo "Updating pip packages:"
 	@ pip install -r "requirements_dev.txt"
 
+server:
+	@ gunicorn --bind 0.0.0.0:5000 --chdir python_api wsgi:app
+
 cleanfull:
 	@ echo "Cleaning old files..."
 	@ rm -rf .pytest_cache
