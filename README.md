@@ -2,8 +2,10 @@
 
 This is an example for python api projects.
 
-![](https://github.com/claick-oliveira/python-api-example/workflows/Python%20package/badge.svg)
+![Github Workflow](https://github.com/claick-oliveira/python-api-example/workflows/Python%20package/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+![demo gif](./images/demo.gif)
 
 ## Getting Started
 
