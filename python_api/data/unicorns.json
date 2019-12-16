@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Unicornfish",
+        "location": "Pacific Oceans",
+        "description": "The unicornfish, Naso unicornis, has a single, hornlike protrusion in the middle of its forehead between its eyes, which makes it look like it has a funny little face.",
+        "info": "https://en.wikipedia.org/wiki/Naso_(fish)"
+    },
+    {
+        "id": 2,
+        "name": "Khutu",
+        "location": "",
+        "description": "There is a lot of confusion surrounding the khutu. For starters, the spelling for khutu can be ku-tu-si (Chinese), hutu, or chutww. The scholar Al-Biruni claimed that the khutu’s horn sweated in the presence of a poison.",
+        "info": "https://en.wikipedia.org/wiki/Khutu"
+    },
+    {
+        "id": 3,
+        "name": "Camphur",
+        "location": "",
+        "description": "Out of all the unicorns, the camphur is probably the most mind-blowing. Not much material is out there on this amphibious unicorn, which was described as having a horse’s mane, hoofed front feet, webbed rear feet, and a single horn.",
+        "info": ""
+    },
+    {
+        "id": 4,
+        "name": "Elasmotherium",
+        "location": "Eurasia",
+        "description": "A “real” unicorn came from the genus Elasmotherium, though it is now extinct. It was a rhinolike mammal that lived during the late Pleistocene period. About 5 meters (16 ft) long, he was a herbivore that frequented areas in what is now Russia, Ukraine, and Uzbekistan.",
+        "info": "https://en.wikipedia.org/wiki/Elasmotherium"
+    },
+    {
+        "id": 5,
+        "name": "Biblical European Unicorn",
+        "location": "Medieval Europe",
+        "description": "A creature of God associated with Christ’s purity, the essential unicorn as we know him is a pure white horse with a golden spiral horn that has the power to purify water and detect poisons. Commonly, a narwhal’s tusk was sold as an alicorn (unicorn’s horn) to unsuspecting buyers in Medieval Europe, who often paid big money for a fake horn.",
+        "info": "https://en.wikipedia.org/wiki/Biblical_European_Unicorn"
+    },
+    {
+        "id": 6,
+        "name": "Orongo",
+        "location": "",
+        "description": "These small, fast antelopes originated in Mongolia and Tibet and are described with either two horns or one. Odell Shepard, a well-known authority on unicorns, described the orongo in his book The Lore of the Unicorn.",
+        "info": "https://en.wikipedia.org/wiki/Khutu"
+    },
+    {
+        "id": 7,
+        "name": "Amaltheia",
+        "location": "Greek",
+        "description": "In Greek legends, Amaltheia was the nurse goat of the infant Zeus, even though some of the stories also claim that she was a nymph. When Zeus was born, his mother, Rhea, hid him in a cave in Mount Ida, so his father, Cronus, couldn’t find him and devour him. Apparently, Cronus didn’t want to be a father because he ate all his other children.",
+        "info": "https://en.wikipedia.org/wiki/Amalthea_(mythology)"
+    },
+    {
+        "id": 8,
+        "name": "One-Horned Wild Ass",
+        "location": "Persia",
+        "description": "One of the earliest people to describe the unicorn was Ctesias, a Greek physician who traveled to Persia in 416 BC to serve as the court physician to Darius II. During his travels in Persia and India, Ctesias described an animal with a white body, a brown head, and dark blue eyes. Its single horn was pure white with a black middle and a vivid crimson point.",
+        "info": "https://en.wikipedia.org/wiki/One-Horned_Wild_Ass"
+    },
+    {
+        "id": 9,
+        "name": "Karkadann",
+        "location": "Persia",
+        "description": "The karkadann (aka the “Lord of the Desert”) is a Persian or Arabic unicorn with strong ties to the rhinoceros. The karkadann was described by the scholar Al-Biruni, who was a native of Uzbekistan, as a dangerous, strong animal with the build of a buffalo and a horn that bent upward, even though the descriptions of the horn and its shape vary.",
+        "info": "https://en.wikipedia.org/wiki/Karkadann"
+    },
+    {
+        "id": 10,
+        "name": "Ki’lin",
+        "location": "China",
+        "description": "Ki’lin was a fearsome animal that punished the wicked and was said to appear at the birth of a great ruler or a sage, such as Confucius. Resembling a dragon, he was often drawn with scales and with clouds surrounding him.",
+        "info": "https://en.wikipedia.org/wiki/Qilin"
+    }
+]
