@@ -20,6 +20,10 @@ These instructions will get you a copy of the project up and running on your loc
 - virtualenv
 - vscode
 
+### Optional
+
+- docker
+
 ### Installing
 
 First of all you need to clone this repository:
@@ -81,6 +85,17 @@ If you prefer to clear all, use:
 ```bash
 make cleanfull
 ```
+
+## Docker
+
+If you want to use docker, use:
+
+```bash
+docker build -t python_api:<version> .
+docker run -it -p 5000:5000 python_api:<version>
+```
+
+Remember to change \<version> to some version, example 0.1.0.
 
 ## Contributing
 
