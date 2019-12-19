@@ -7,6 +7,18 @@ app = Flask(__name__)
 
 
 def make_public_unicorn(unicorn):
+    '''
+    This function adds for each object a uri, this uri is
+    a link to access the data, example:
+
+    "uri": "http://<url>/api/unicorns/<id>"
+
+    Parameters:
+    unicorn (dict): Dictionary with unicorn data
+
+    Returns:
+    new_unicorn (dict): Dictionary with unicorn data + uri for each unicorn
+    '''
     new_unicorn = {}
     for field in unicorn:
         if field == 'id':
@@ -20,8 +32,20 @@ def make_public_unicorn(unicorn):
     return new_unicorn
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
+    '''
+    This function returns a message as json. The method allowed is GET.
+
+    Path:
+    /
+
+    Returns:
+    {
+        'msg': 'Python API example!',
+        'status': 200
+    }
+    '''
     return jsonify({
         'msg': 'Python API example!',
         'status': 200
@@ -30,6 +54,28 @@ def index():
 
 @app.route('/api/unicorns', methods=['GET'])
 def get_unicorns():
+    '''
+    This function returns all unicorns as json. The method allowed is GET
+
+    Path:
+    /api/unicorns
+
+    Returns:
+    {
+        "unicorns": [
+            {
+                "description": "The unicornfish, Naso unicornis, has a single,
+                hornlike protrusion in the middle of its forehead between its
+                eyes, which makes it look like it has a funny little face.",
+                "info": "https://en.wikipedia.org/wiki/Naso_(fish)",
+                "location": "Pacific Oceans",
+                "name": "Unicornfish",
+                "uri": "http://0.0.0.0:5000/api/unicorns/1"
+            },
+            ...N...
+        ]
+    }
+    '''
     return jsonify(
         {'unicorns': [make_public_unicorn(unicorn) for unicorn in unicorns]}
     )
@@ -37,6 +83,29 @@ def get_unicorns():
 
 @app.route('/api/unicorns/<int:unicorn_id>', methods=['GET'])
 def get_unicorn(unicorn_id):
+    '''
+    This function returns an unicorns as json based on ID. The method
+    allowed is GET
+
+    Path:
+    /api/unicorns/<ID>
+
+    Parameters:
+    unicorn_id (int): Unicorn ID
+
+    Returns:
+    {
+        "unicorn": {
+            "description": "The unicornfish, Naso unicornis, has a single,
+            hornlike protrusion in the middle of its forehead between its
+            eyes, which makes it look like it has a funny little face.",
+            "id": 1,
+            "info": "https://en.wikipedia.org/wiki/Naso_(fish)",
+            "location": "Pacific Oceans",
+            "name": "Unicornfish"
+        }
+    }
+    '''
     unicorn = [unicorn for unicorn in unicorns if unicorn['id'] == unicorn_id]
     if len(unicorn) == 0:
         abort(404)
@@ -45,6 +114,31 @@ def get_unicorn(unicorn_id):
 
 @app.route('/api/unicorns', methods=['POST'])
 def create_task():
+    '''
+    This function adds a new unicorn bases on body. The method allowed is POST
+
+    Path:
+    /api/unicorns
+
+    Body:
+    {
+        "name": "New Unicorn",
+        "location": "Rainbow",
+        "description": "New unicorn was added!",
+        "info": ""
+    }
+
+    Returns:
+    {
+        "unicorn": {
+            "description": "New unicorn was added!",
+            "id": 11,
+            "info": "",
+            "location": "Rainbow",
+            "name": "New Unicorn"
+        }
+    }
+    '''
     if not request.json or 'name' not in request.json:
         abort(400)
     unicorn = {
@@ -60,6 +154,35 @@ def create_task():
 
 @app.route('/api/unicorns/<int:unicorn_id>', methods=['PUT'])
 def update_task(unicorn_id):
+    '''
+    This function updates a new unicorn bases on body. The method
+    allowed is PUT
+
+    Path:
+    /api/unicorns/<ID>
+
+    Parameters:
+    unicorn_id (int): Unicorn ID
+
+    Body:
+    {
+        "name": "New Unicorn",
+        "location": "Rainbow",
+        "description": "New unicorn was updated!",
+        "info": ""
+    }
+
+    Returns:
+    {
+        "unicorn": {
+            "description": "New unicorn was updated!",
+            "id": 11,
+            "info": "",
+            "location": "Rainbow",
+            "name": "New Unicorn"
+        }
+    }
+    '''
     unicorn = [unicorn for unicorn in unicorns if unicorn['id'] == unicorn_id]
     if len(unicorn) == 0:
         abort(404)
@@ -89,6 +212,21 @@ def update_task(unicorn_id):
 
 @app.route('/api/unicorns/<int:unicorn_id>', methods=['DELETE'])
 def delete_task(unicorn_id):
+    '''
+    This function deletes an unicorn bases on ID. The method
+    allowed is DELETE
+
+    Path:
+    /api/unicorns/<ID>
+
+    Parameters:
+    unicorn_id (int): Unicorn ID
+
+    Returns:
+    {
+        "result": true
+    }
+    '''
     unicorn = [unicorn for unicorn in unicorns if unicorn['id'] == unicorn_id]
     if len(unicorn) == 0:
         abort(404)
@@ -98,6 +236,17 @@ def delete_task(unicorn_id):
 
 @app.errorhandler(404)
 def not_found(error):
+    '''
+    This function returns a message as json. The method allowed is GET.
+
+    Parameters:
+    error (err): Error message
+
+    Returns:
+    {
+        'error': 'Not found'
+    }
+    '''
     return make_response(jsonify({'error': 'Not found'}), 404)
 
 
